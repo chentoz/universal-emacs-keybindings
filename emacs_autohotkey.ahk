@@ -84,9 +84,12 @@ keys["chrome.exe"]
    : {"b": ["^o", False, ""]
     , "d": ["^+j", False, ""]
     , "f": ["^l", False, ""]
-    , "k": ["^w", False, ""] }
+    , "k": ["^w", False, ""]}
   , "alt"
-   : {"n": ["^t", False, ""] } }
+   : {"n": ["^t", False, ""] }
+  , "ctrl"
+   : {"w": ["^w", False, ""]
+    ,"h": ["^h", False, ""]}}
 
 keys["globalOverride"]
 := {"ctrl"
@@ -99,7 +102,7 @@ keys["globalOverride"]
   , "alt"
     : {"m": ["{LWin down}{Up}{LWin up}", False, ""] } }
 
-global appsWithNativeEmacsKeybindings = ["emacs.exe", "rubymine64.exe", "conemu64.exe"]
+global appsWithNativeEmacsKeybindings = ["emacs.exe", "rubymine64.exe", "conemu64.exe", "code.exe", "devenv.exe"]
 global ctrlXActive := False
 global ctrlSpaceActive := False
 
@@ -362,14 +365,14 @@ IsProgramActive(classOrExec)
 CurrentNamespace(mods, key)
 {
   currentApp := CurrentApp()
-    
+
   If KeybindingExists("globalOverride", mods, key)
   {
-    Return "globalOverride"   
+    Return "globalOverride"
   }
   Else If (currentApp && KeybindingExists(currentApp, mods, key))
   {
-    Return currentApp      
+    Return currentApp
   }
 
   Return "globalEmacs"
