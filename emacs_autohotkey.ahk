@@ -74,6 +74,7 @@ global keys
         ,"v": ["{PgUp}", True, ""]
         ,"w": ["^c", False, ""]
         ,"y": ["^v", False, ""]
+        ,"b": ["^{Left}", True, ""]
         ,"Backspace": ["^z", False, ""] }
    , "altShift"
       : {".": ["^{End}", True, ""]
