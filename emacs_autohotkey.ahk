@@ -57,7 +57,8 @@ global keys
         ,"y": ["^v", False, ""]
         ,"/": ["^z", False, ""]
         ,"Space": ["", True, "MacroCtrlSpace"]
-        ,"Backspace": ["^+{Left}^x", False,""] }
+        ,"Backspace": ["^+{Left}^x", False,""]
+        ,"x": ["", False, "MacroStartCtrlX"] }
     , "ctrlXPrefix"
       : {"c": ["!{F4}", False, ""]
         ,"f": ["^o", False, ""]
@@ -67,7 +68,11 @@ global keys
         ,"r": ["{F5}", False, ""]
         ,"s": ["^s", False, ""]
         ,"u": ["^z", False, ""]
-        ,"w": ["{F12}", False, ""] }
+        ,"w": ["{F12}", False, ""]
+        ,"j": ["^{Esc}", False, ""]
+        ,"t": ["!{Space}", False, ""]
+        ,"]": ["^#{Right}", False, ""]
+        ,"[": ["^#{Left}", False, ""]}
     , "alt"
       : {"f": ["^{Right}", True, ""]
         ,"n": ["^n", False, ""]
@@ -75,7 +80,8 @@ global keys
         ,"w": ["^c", False, ""]
         ,"y": ["^v", False, ""]
         ,"b": ["^{Left}", True, ""]
-        ,"Backspace": ["^z", False, ""] }
+        ,"Backspace": ["^z", False, ""]
+        ,"m": ["{LWin down}{Up}{LWin up}", False, ""]}
    , "altShift"
       : {".": ["^{End}", True, ""]
        , ",": ["^{Home}", True, ""] } } }
@@ -93,17 +99,9 @@ keys["chrome.exe"]
     ,"h": ["^h", False, ""]}}
 
 keys["globalOverride"]
-:= {"ctrl"
-    : {"x": ["", False, "MacroStartCtrlX"] }
-  , "ctrlXPrefix"
-    : {"j": ["^{Esc}", False, ""]
-     , "t": ["!{Space}", False, ""]
-     , "]": ["^#{Right}", False, ""]
-     , "[": ["^#{Left}", False, ""] }
-  , "alt"
-    : {"m": ["{LWin down}{Up}{LWin up}", False, ""] } }
+:= { }
 
-global appsWithNativeEmacsKeybindings = ["emacs.exe", "rubymine64.exe", "conemu64.exe", "code.exe", "devenv.exe", "Listary.exe", "Code.exe"]
+global appsWithNativeEmacsKeybindings = ["emacs.exe", "rubymine64.exe", "conemu64.exe", "code.exe", "devenv.exe", "Devenv.exe", "Listary.exe", "Code.exe"]
 global ctrlXActive := False
 global ctrlSpaceActive := False
 
