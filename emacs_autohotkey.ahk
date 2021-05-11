@@ -56,7 +56,7 @@ global keys
         ,"w": ["^x", False, ""]
         ,"y": ["^v", False, ""]
         ,"/": ["^z", False, ""]
-        ,"Space": ["", True, "MacroCtrlSpace"]
+        ;,"Space": ["", True, "MacroCtrlSpace"]
         ,"Backspace": ["^+{Left}^x", False,""]
         ,"x": ["", False, "MacroStartCtrlX"] }
     , "ctrlXPrefix"
@@ -98,8 +98,59 @@ keys["chrome.exe"]
    : {"w": ["^w", False, ""]
     ,"h": ["^h", False, ""]}}
 
+keys["devenv.exe"]
+:= {"ctrl"
+      : {"a": ["{Home}", True, ""]
+        ,"b": ["{Left}", True, ""]
+        ,"d": ["{Del}", False, ""]
+        ,"e": ["{End}", True, ""]
+        ,"f": ["{Right}", True, ""]
+        ,"g": ["{Escape}", False, ""]
+        ,"h": ["", False, ""]
+        ,"j": ["", True, ""]
+        ,"k": ["", False, "MacroKillLine"]
+        ,"n": ["{Down}", True, ""]
+        ,"o": ["{Enter}", False, ""]
+        ,"p": ["{Up}", True, ""]
+        ,"r": ["^f", False, ""]
+        ,"s": ["^f", False, ""]
+        ,"v": ["{PgDn}", True, ""]
+        ,"w": ["^x", False, ""]
+        ,"y": ["^v", False, ""]
+        ,"/": ["^z", False, ""]
+        ;,"Space": ["", True, "MacroCtrlSpace"]
+        ,"Backspace": ["^+{Left}^x", False,""]
+        ,"x": ["", False, "MacroStartCtrlX"] }
+    , "ctrlXPrefix"
+      : {"c": ["!{F4}", False, ""]
+        ,"f": ["^o", False, ""]
+        ,"g": ["^f", False, ""]
+        ,"h": ["^a", False, ""]
+        ,"k": ["!{F4}", False, ""]
+        ,"r": ["{F5}", False, ""]
+        ,"s": ["^s", False, ""]
+        ,"u": ["^z", False, ""]
+        ,"w": ["{F12}", False, ""]
+        ,"j": ["^{Esc}", False, ""]
+        ,"t": ["!{Space}", False, ""]
+        ,"]": ["^#{Right}", False, ""]
+        ,"[": ["^#{Left}", False, ""]}
+    , "alt"
+      : {"f": ["^{Right}", True, ""]
+        ,"n": ["^n", False, ""]
+        ,"v": ["{PgUp}", True, ""]
+        ,"w": ["^c", False, ""]
+        ,"y": ["^v", False, ""]
+        ,"b": ["^{Left}", True, ""]
+        ,"Backspace": ["^z", False, ""]
+        ,"m": ["{LWin down}{Up}{LWin up}", False, ""]}
+   , "altShift"
+      : {".": ["^{End}", True, ""]
+       , ",": ["^{Home}", True, ""] } }
+
 keys["globalOverride"]
-:= { }
+:= {"ctrl"
+: {"Space": ["", True, "MacroCtrlSpace"]}}
 
 global appsWithNativeEmacsKeybindings = ["emacs.exe", "rubymine64.exe", "conemu64.exe", "code.exe", "devenv.exe", "Devenv.exe", "Listary.exe", "Code.exe"]
 global ctrlXActive := False
